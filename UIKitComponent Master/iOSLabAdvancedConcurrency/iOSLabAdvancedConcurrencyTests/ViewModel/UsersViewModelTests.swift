@@ -50,7 +50,8 @@ struct UsersViewModelTests {
         #expect(await cache.getUsersCount == 1)
     }
     
-    @Test func loadUsers_shouldShowEmptyState_whenNoUsersInCacheAndRepository() async throws {
+    @Test
+    func loadUsers_shouldShowEmptyState_whenNoUsersInCacheAndRepository() async throws {
         let mockService = MockUserService(result: .success([]))
         let mockCache = MockUserCache(cachedUsers: [])
         

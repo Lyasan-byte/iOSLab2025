@@ -1,5 +1,5 @@
 //
-//  iOSLabAdvancedConcurrencyApp.swift
+//  IOSLabAdvancedConcurrencyApp.swift
 //  iOSLabAdvancedConcurrency
 //
 //  Created by Ляйсан
@@ -8,7 +8,7 @@
 import SwiftUI
 
 @main
-struct iOSLabAdvancedConcurrencyApp: App {
+struct IOSLabAdvancedConcurrencyApp: App {
     @State var usersViewModel = UsersViewModel(
         userRepository: AlamofireUserService(),
         userCache: DefaultUserCache()

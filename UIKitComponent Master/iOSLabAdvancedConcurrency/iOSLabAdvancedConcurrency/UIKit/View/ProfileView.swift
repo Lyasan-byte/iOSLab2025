@@ -140,7 +140,8 @@ final class ProfileView: UIView {
         followButton.configuration = configuration
     }
     
-    @objc private func handleFollow() {
+    @objc
+    private func handleFollow() {
         followTap?()
     }
     

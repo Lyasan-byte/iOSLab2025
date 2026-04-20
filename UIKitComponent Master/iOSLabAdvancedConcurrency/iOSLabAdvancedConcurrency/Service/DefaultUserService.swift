@@ -44,7 +44,7 @@ final class DefaultUserService: UserRepository {
         return try JSONDecoder().decode([User].self, from: data)
     }
     
-    private func handleResponse(data: Data, response: URLResponse) throws  {
+    private func handleResponse(data: Data, response: URLResponse) throws {
         guard let response = response as? HTTPURLResponse,
               (200..<300).contains(response.statusCode)
         else { throw URLError(.badServerResponse) }
