@@ -12,24 +12,36 @@ struct CityWeatherDetailView: View {
     
     var body: some View {
         VStack(spacing: -3) {
-            Text(cityWeahter.city.name)
-                .font(.largeTitle)
-                .fontWeight(.medium)
+            cityName
             
-            HStack(spacing: 0.5) {
-                if (Int(cityWeahter.weather.temperature2m.rounded())) >= 0 {
-                    Text("-").opacity(0)
-                }
-                Text("\(Int(cityWeahter.weather.temperature2m.rounded()))")
-                Text("°")
-            }
-            .font(.system(size: 85, weight: .light))
+            degrees
 
-            Text(cityWeahter.weather.weatherDescription)
-                .font(.headline)
-                .foregroundStyle(.lightText)
+            weatherDescription
         }
         .foregroundStyle(.white)
+    }
+    
+    private var cityName: some View {
+        Text(cityWeahter.city.name)
+            .font(.largeTitle)
+            .fontWeight(.medium)
+    }
+    
+    private var degrees: some View {
+        HStack(spacing: 0.5) {
+            if (Int(cityWeahter.weather.temperature2m.rounded())) >= 0 {
+                Text("-").opacity(0)
+            }
+            Text("\(Int(cityWeahter.weather.temperature2m.rounded()))")
+            Text("°")
+        }
+        .font(.system(size: 85, weight: .light))
+    }
+    
+    private var weatherDescription: some View {
+        Text(cityWeahter.weather.weatherDescription)
+            .font(.headline)
+            .foregroundStyle(.lightText)
     }
 }
 

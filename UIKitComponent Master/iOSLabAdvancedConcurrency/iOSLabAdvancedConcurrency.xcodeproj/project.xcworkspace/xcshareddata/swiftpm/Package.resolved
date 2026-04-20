@@ -1,0 +1,24 @@
+{
+  "originHash" : "d8e9a77018d362154620f65f36e507598d0bf0e3ebfa3463ebec216b4155471e",
+  "pins" : [
+    {
+      "identity" : "alamofire",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Alamofire/Alamofire.git",
+      "state" : {
+        "revision" : "e938f8c66708e7352fc7e3512647fa54255b267a",
+        "version" : "5.11.2"
+      }
+    },
+    {
+      "identity" : "uikitcomponent",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Lyasan-byte/UIKitComponent.git",
+      "state" : {
+        "revision" : "19db92d492e149f9d46db70b9209bf21e6c318fd",
+        "version" : "1.0.0"
+      }
+    }
+  ],
+  "version" : 3
+}

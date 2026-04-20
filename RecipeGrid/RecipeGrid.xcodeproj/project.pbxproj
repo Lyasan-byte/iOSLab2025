@@ -11,9 +11,9 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		3CFCC09E2EE10855009E7631 /* RecipeGrid */ = {
+		3CFCC09E2EE10855009E7631 /* RecipeGridApp */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = RecipeGrid;
+			path = RecipeGridApp;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -32,7 +32,7 @@
 		3CFCC0932EE10854009E7631 = {
 			isa = PBXGroup;
 			children = (
-				3CFCC09E2EE10855009E7631 /* RecipeGrid */,
+				3CFCC09E2EE10855009E7631 /* RecipeGridApp */,
 				3CFCC09D2EE10855009E7631 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -61,7 +61,7 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				3CFCC09E2EE10855009E7631 /* RecipeGrid */,
+				3CFCC09E2EE10855009E7631 /* RecipeGridApp */,
 			);
 			name = RecipeGrid;
 			packageProductDependencies = (
