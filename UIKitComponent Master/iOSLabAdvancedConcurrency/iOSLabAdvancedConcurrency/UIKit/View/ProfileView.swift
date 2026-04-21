@@ -12,7 +12,7 @@ final class ProfileView: UIView {
     var followTap: (() -> Void)?
     
     private let background = BackgroundView(
-        backgroundColor: .systemBackground,
+        backgroundColor: .tertiarySystemBackground,
         cornerRadius: 30
     )
     
@@ -75,6 +75,10 @@ final class ProfileView: UIView {
         company.setData(title: "COMPANY", text: user.company)
         
         profileImage.setImage(url: "https://api.api-ninjas.com/v1/randomimage", cacheKey: user.id, imageLoader: imageLoader)
+        configureButton(isFollowing)
+    }
+    
+    func toggleIsFollowing(_ isFollowing: Bool) {
         configureButton(isFollowing)
     }
     

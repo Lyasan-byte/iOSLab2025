@@ -41,7 +41,7 @@ struct UsersView: View {
     
     private var usersView: some View {
         ZStack {
-            Color(.secondarySystemBackground).ignoresSafeArea()
+            background.ignoresSafeArea()
             VStack(spacing: 10) {
                 Text("Users")
                     .font(.system(size: 30, weight: .bold))
@@ -52,7 +52,7 @@ struct UsersView: View {
                         usersViewModel.obtainUsers()
                     }
             }
-            .padding(.top, 70)
+            .padding(.top, 65)
         }
     }
     
@@ -70,6 +70,8 @@ struct UsersView: View {
                 }
             }
         }
+        .scrollContentBackground(.hidden)
+        .scrollIndicators(.hidden)
         .navigationLinkIndicatorVisibility(.hidden)
     }
     
@@ -87,8 +89,19 @@ struct UsersView: View {
                 .font(.subheadline)
         }
     }
+    
+    @ViewBuilder private var background: some View {
+        Color("backgroundColor")
+        Rectangle()
+            .fill(Color(.systemIndigo).opacity(0.6))
+            .blur(radius: 50)
+            .frame(width: 470, height: 50)
+            .position(x: 220, y: 800)
+    }
 }
 
 #Preview {
-    UsersView(usersViewModel: UsersViewModel(userRepository: AlamofireUserService(), userCache: DefaultUserCache()))
+    NavigationStack {
+        UsersView(usersViewModel: UsersViewModel(userRepository: AlamofireUserService(), userCache: DefaultUserCache()))
+    }
 }

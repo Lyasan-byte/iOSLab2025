@@ -29,10 +29,6 @@ struct ProfileControllerWrapper: UIViewControllerRepresentable {
             isFollowing.toggle()
         }
         
-        uiViewController.setupData(
-            user: user,
-            isFollowing: isFollowing,
-            imageLoader: imageLoader
-        )
+        uiViewController.toggleIsFollowing(isFollowing)
     }
 }

@@ -10,8 +10,9 @@ import SwiftUI
 @MainActor
 @Observable
 final class UsersViewModel {
-    var users: [User] = []
+    var searchText = ""
     var state: UsersState = .loading
+    var users: [User] = []
     
     private let userRepository: UserRepository
     private let userCache: UserCache

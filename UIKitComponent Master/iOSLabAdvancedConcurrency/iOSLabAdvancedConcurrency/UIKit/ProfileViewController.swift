@@ -44,4 +44,8 @@ final class ProfileViewController: UIViewController {
     func setupData(user: User, isFollowing: Bool, imageLoader: ImageLoader) {
         profileView.setData(user: user, isFollowing: isFollowing, imageLoader: imageLoader)
     }
+    
+    func toggleIsFollowing(_ isFollowing: Bool) {
+        profileView.toggleIsFollowing(isFollowing)
+    }
 }
